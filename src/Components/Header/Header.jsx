@@ -1,4 +1,5 @@
 import React from 'react'
+import {FaInfoCircle, FaBars, FaSearch, FaUser} from 'react-icons/fa'
 
 const Header = () => {
   return (
@@ -15,7 +16,13 @@ const Header = () => {
             <a href='#blogs'>Blogs</a>
         </nav>
 
-        
+        <div className='app__header-icons'>
+            <FaBars className='app__header-menu-btn' />
+            <FaInfoCircle className='app__header-info-btn' />
+            <FaSearch className='app__header-search-btn' />
+            <FaUser className='app__header-login-btn' />
+        </div>
+
     </header>
   )
 }

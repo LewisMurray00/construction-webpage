@@ -1,0 +1,39 @@
+:root{
+  --yellow: #f5bf23;
+  --black: #111;
+  --white: #fff;
+  --light-colour: #665;
+  --light-bg: #eee;
+  --box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  --border: 0.1rem solid rgba(0,0,0,0.3);
+}
+
+*{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all 0.2s linear;  
+}
+
+body{
+  font-size: 62.5%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+
+  &::-webkit-scrollbar{
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track{
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+  }
+}

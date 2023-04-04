@@ -1,4 +1,6 @@
 import React from 'react'
+import './Header.scss'
+
 import {FaInfoCircle, FaBars, FaSearch, FaUser} from 'react-icons/fa'
 
 const Header = () => {

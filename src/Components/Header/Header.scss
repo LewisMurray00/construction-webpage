@@ -1,3 +1,37 @@
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+  }
+
+@mixin titleText($titleSize){
+    font-size: $titleSize;
+    color: var(--black);
+    text-transform: capitalize;
+  }
+
+@mixin graphText($graphSize){
+    font-size: $graphSize;
+    color: var(--light-colour);
+    line-height: 1.5;
+  }
+
+@mixin iconsBox(){
+    height: 1.75rem;
+    width: 1.75rem;
+    line-height: 1rem;
+    font-size: 0.25rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+  
+    &:hover{
+      background: var(--black);
+      color: var(--white);
+    }
+  }
+
 .app__header{
     position: sticky;
     
@@ -12,4 +46,91 @@
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
+}
+
+.app__header-logo{
+    @include titleText(2.5rem);
+
+    span{
+        color: var(--yellow);
+    }
+}
+
+.app__header-navbar a{
+    @include titleText(1.5rem);
+    margin: 0 1rem;
+
+    &:hover{
+        color: var(--yellow);
+    }
+}
+
+.app__header-icons {
+
+    .app__header-menu-btn{
+        @include iconsBox();
+        margin-left: 0.3rem;
+        display: none;
+    }
+
+    .app__header-info-btn{
+        @include iconsBox();
+        margin-left: 0.3rem;
+    }
+
+    .app__header-search-btn{
+        @include iconsBox();
+        margin-left: 0.3rem;
+    }
+
+    .app__header-login-btn{
+        @include iconsBox();
+        margin-left: 0.3rem;
+    }
+}
+
+.app__header-navbar-menu{
+    display: none;
+}
+
+//Media Queries
+
+@media screen and (max-width:1200px){
+
+    .app__header{
+        padding: 1.5rem 2rem;
+    }
+}
+
+@media screen and (max-width: 991px){
+
+    .app__header{
+        
+        .app__header-menu-btn{
+            display: inline-block;
+        }
+
+        .app__header-navbar{
+            display: hidden;
+        }
+
+        .app__header-navbar-menu{
+            position: absolute;
+            
+            top: 99%;
+            left: 0;
+            right: 0;
+
+            background: var(--white);
+            
+            border-top: var(--border);
+            border-bottom: var(--border);
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 450px){
+
 }

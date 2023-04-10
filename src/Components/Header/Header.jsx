@@ -1,13 +1,14 @@
 import React from 'react'
 import './Header.scss'
 
+import { images } from '../../Constants'
 import { AppWrap } from '../../wrapper'
 
 const Header = () => {
   return (
     <div className='app__header app__flex'>
-        <div className='app__header-info'>
-            
+        
+        <div className='app__header-info'>    
             <div className='app__header-badge'>
                 <div className='badge-cmp app__flex'>
                     <span>🛠️</span>
@@ -19,12 +20,17 @@ const Header = () => {
                 <div className='tag-cmp app__flex'>
                     <p className='p-text'>Plumbing and Gas</p>
                 </div>
-
             </div>
         </div>
 
-        <div>
-            
+        <div className='app__header-img'>
+            <img src={images.profile} alt='profile_bg' />
+
+            <img src={images.circle} alt='profile_circle' className='overlay_circle' />
+        </div>
+
+        <div className='app__header-circles'>
+
         </div>
     </div>
   )

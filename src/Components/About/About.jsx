@@ -1,5 +1,7 @@
 import React from 'react'
+import './About.scss'
 
+import { images } from '../../Constants'
 import { AppWrap } from '../../wrapper'
 
 const About = () => {

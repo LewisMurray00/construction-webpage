@@ -30,7 +30,11 @@ const Header = () => {
         </div>
 
         <div className='app__header-circles'>
-
+            {[images.tap, images.gasSafe, images.wrench].map((circle, index) =>(
+                <div className='circle-cmp app__flex' key={`circle-${index}`}>
+                    <img src={circle} alt='circle' />
+                </div>
+            ))}
         </div>
     </div>
   )

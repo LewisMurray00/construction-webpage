@@ -1,7 +1,9 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import './About.scss'
 
 import { images } from '../../Constants'
+import { MotionWrap } from '../../wrapper'
 import { AppWrap } from '../../wrapper'
 
 const abouts = [
@@ -31,11 +33,16 @@ const About = () => {
 
       <div className='app__profiles'>
         {abouts.map((about,index) => (
-          <div className='app__profile-item' key={about.title + index}>
+          <motion.div 
+          whileInView={{ opacity: 1 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ duration: 0.5, type: 'tween'}}
+          className='app__profile-item' 
+          key={about.title + index}>
             <img src={about.imgUrl} alt={about.title} />
             <h2 className='bold-text' style={{ marginTop: 20}}>{about.title}</h2>
             <p className='p-text' style={{ marginTop: 10}}>{about.description}</p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>

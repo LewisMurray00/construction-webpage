@@ -1,7 +1,26 @@
+.app__whitebg {
+  background-color: var(--white);
+}
+
+.app__primarybg {
+  background-color: #edf2f8;
+}
+
 .app__flex{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.app__wrapper {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  padding: 4rem 2rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 4rem 1rem 2rem;
+  }
 }
 
 .copyright {
@@ -49,6 +68,21 @@
         font-size: 1.75rem;
     }
 }
+
+.bold-text {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--black);
+    text-align: left;
+  
+    @media screen and (min-width: 2000px) {
+      font-size: 2rem;
+    }
+  
+    @media screen and (max-width: 450px) {
+      font-size: 0.9rem;
+    }
+  }
 
 .app__navigation{
     display: flex;
